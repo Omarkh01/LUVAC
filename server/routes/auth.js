@@ -29,7 +29,6 @@ router.post('/', async (req, res) => {
 
     await User.findByIdAndUpdate(user._id, {refreshToken: refreshToken}, {new: true});
     
-    //one day
     let maxAge = 24 * 60 * 60 * 1000;
     res.cookie("jwt", refreshToken, { httpOnly: true, maxAge: maxAge });
     res.send({token: accessToken, role: admin});

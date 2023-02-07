@@ -1,43 +1,38 @@
-import React, { Component } from 'react'
+import React from "react";
+import { Navigate } from "react-router-dom"
 import Customers from "./Components/Customers";
 import Movies from "./Components/Movies";
 import NewRentals from "./Components/NewRentals";
-import Home from './Components/Home';
-import Login from "./Components/Login"
+import Home from "./Components/Home";
+import Login from "./Components/Login";
 import Register from "./Components/Register";
-import NavigationBar from './Components/NavigationBar';
 import Unauthorized from "./Components/Unauthorized";
-import NoPage from './Components/NoPage';
-import RequireAuth from './Components/RequireAuth';
-import { Routes, Route } from 'react-router-dom';
+import NoPage from "./Components/NoPage";
+// import RequireAuth from "./Components/RequireAuth";
+import { Routes, Route } from "react-router-dom";
 
-class App extends Component {
-    render() {
+function App() {
+  const isLoggedIn = window.localStorage.getItem("isLoggedIn");
     return (
       <>
         <Routes>
-            {/* public routes */}
-            <Route index element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="/" element={<Home />} />
 
-            {/* private routes */}
-            <Route element={<RequireAuth isAdmin={true} />}>
-              <Route path="/customers" element={<Customers />} />
-            </Route>
+          {/* public routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
 
-            <Route element={<RequireAuth />}>
-              <Route path="/newrentals" element={<NewRentals />} />
-              <Route path="/movies" element={<Movies />} />
-            </Route>
+          {/* private routes */}
+          <Route path="/movies" element={isLoggedIn === "true" ? <Movies /> : <Navigate to="/login" />} />
+          <Route path="/newrentals" element={isLoggedIn === "true" ? <NewRentals /> : <Navigate to="/login" />} />
+          <Route path="/customers" element={isLoggedIn === "true" ? <Customers /> : <Navigate to="/login" />} />
 
-            {/* catch all*/}
-            <Route path="*" element={<NoPage />} />
+          {/* catch all*/}
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </>
     );
-  }
 }
 
-export default App
+export default App;

@@ -1,12 +1,8 @@
 import { useRef, useState, useEffect } from "react";
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../api/axios";
-import "./Login.css";
+import "./style.css";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -94,7 +90,7 @@ const Register = () => {
   };
 
   return (
-    <div className="App">
+    <div className="register-container">
       {success ? (
         <section>
           <h1>Success!</h1>
@@ -112,7 +108,7 @@ const Register = () => {
             {errMsg}
           </p>
           <h1>Register</h1>
-          <form onSubmit={handleSubmit}>
+          <form className="register-form" onSubmit={handleSubmit}>
             <label htmlFor="username">
               Username:
               <FontAwesomeIcon
@@ -258,6 +254,7 @@ const Register = () => {
 
             <button
               disabled={!validName || !validPwd || !validMatch ? true : false}
+              className="registerButton"
             >
               Sign Up
             </button>

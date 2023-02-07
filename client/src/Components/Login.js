@@ -1,21 +1,20 @@
 import { useRef, useState, useEffect } from "react";
-import { useNavigate, useLocation } from 'react-router-dom';
+// import { useNavigate, useLocation } from 'react-router-dom';
 import { useStateContext } from '../context/StateContext';
 
 import axios from "../api/axios";
 const LOGIN_URL = "/api/auth";
 
 const Login = () => {
-  const { setAuth } = useStateContext();
-  const { setSuccess } = useStateContext();
+  const { setAuth } = useStateContext ();
 
   const userRef = useRef();
   const errRef = useRef();
 
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
-  
+  // const navigate = useNavigate();
+  // const location = useLocation();
+  // const from = location.state?.from?.pathname || "/movies";
+
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -39,14 +38,19 @@ const Login = () => {
         });
 
       console.log(JSON.stringify(response?.data));
-      //console.log(JSON.stringify(response));
+
       const accessToken = response?.data.token;
       const role = response?.data.role;
+
       setAuth({ user, pwd, accessToken, role});
       setUser("");
       setPwd("");
-      setSuccess(true);
-      navigate(from, { replace: true });
+
+      window.localStorage.setItem("token", JSON.stringify(response.data.token));
+      window.localStorage.setItem("isLoggedIn", true);
+      
+      // navigate(from, { replace: true });
+      window.location.href = '/movies';
     } 
     
     catch (err) {
@@ -62,8 +66,8 @@ const Login = () => {
   };
 
   return (
-    <div className="App">
-        <section>
+    <div className="login-container">
+        <section className="login-section">
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -72,7 +76,7 @@ const Login = () => {
             {errMsg}
           </p>
           <h1>Sign In</h1>
-          <form onSubmit={handleSubmit}>
+          <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="username">Email:</label>
             <input
               type="email"
@@ -92,7 +96,7 @@ const Login = () => {
               value={pwd}
               required
             />
-            <button>Sign In</button>
+            <button className="login-button">Sign In</button>
           </form>
           <p>
             Need an Account?

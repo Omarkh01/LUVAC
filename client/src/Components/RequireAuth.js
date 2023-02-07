@@ -6,11 +6,9 @@ const RequireAuth = ({ isAdmin }) => {
   const location = useLocation();
 
   return (
-    auth?.role === isAdmin
+    auth?.user
       ? <Outlet />
-      : auth?.user
-        ? <Navigate to="/unauthorized" state={{ from: location }} replace/>
-        : <Navigate to="/login" state={{ from: location }} replace/>
+      : <Navigate to="/login" state={{ from: location }} replace/>
   )
 }
 

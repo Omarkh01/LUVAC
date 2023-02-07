@@ -1,9 +1,6 @@
-/* Home */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-.home-container {
-  width: 100%;
-  height: 100%;
-}
+/* Home */
 
 .background-image {
   width: 100%;
@@ -14,14 +11,13 @@
   transition: background-image 0.7s ease-in-out;
 }
 
-.login-container{
+.login-button-container{
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute; 
   top: 18px; 
   right: 30px; 
-  background-color: rgb(255, 0, 0, 0.8);  
   width: 100px;
   transition: 0.3s ease-in-out;
 }
@@ -29,15 +25,9 @@
 .loginButton {
   color: rgb(255, 255, 255, 0.7);
   text-decoration: none;
-  padding: 0.5em 0;
 }
 
-.login-container:hover {
-  background-color: rgb(255, 0, 0, 1);
-  transition: 0.3s ease-in-out;
-}
-
-.login-container:hover .loginButton {
+.login-button-container:hover .loginButton {
   color: rgb(255, 255, 255);
 }
 
@@ -61,3 +51,102 @@
 
 /* Login, Register */
 
+.login-container, .register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 1rem 0.5rem;
+  background-color: rgb(54, 58, 63);
+  min-height: 100vh;
+  font-size: 22px;
+  color: #fff;
+}
+
+.login-section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.login-button, .registerButton {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
