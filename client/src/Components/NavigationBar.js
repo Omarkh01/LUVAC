@@ -1,47 +1,36 @@
-import React from "react";
+import './style.css'
 
 function NavigationBar() {
   return (
-    <nav style={styles.nav}>
-      <ul style={styles.ul}>
-        <li style={styles.li}>
-          <a style={styles.a} href="/movies">Movies</a>
+    <nav className="nav-bar">
+      <ul className="nav nav-tabs">
+        <li className="nav-item">
+          <a href="/movies" className="nav-link">
+            Movies
+          </a>
         </li>
-        <li style={styles.li}>
-          <a style={styles.a} href="/newrentals">New Rentals</a>
+        <li className="nav-item">
+          <a href="/newrentals" className="nav-link">
+            New Rentals
+          </a>
         </li>
-        <li style={styles.li}>
-          <a style={styles.a} href="/customers">Customers</a>
+        <li className="nav-item">
+          <a href="/customers" className="nav-link">
+            Customers
+          </a>
         </li>
       </ul>
-      <button onClick={() => {
-        window.localStorage.clear();
-        window.location.href = '/';
-      }} className="btn btn-outline-dark">Logout</button>
+      <button
+        onClick={() => {
+          window.localStorage.clear();
+          window.location.href = "/";
+        }}
+        className="btn btn-outline-dark"
+      >
+        Logout
+      </button>
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "1rem",
-  },
-  ul: {
-    display: "flex",
-  },    
-  li: {
-    listStyle: "none",
-    marginRight: "1rem",
-    color: "black",
-  },  
-  a: {
-    display: "inline-block",
-    width: "100%",
-    height: "100%",
-    color: "black",
-  },
-};
 
 export default NavigationBar;

@@ -48,6 +48,7 @@ const Login = () => {
 
       window.localStorage.setItem("token", JSON.stringify(response.data.token));
       window.localStorage.setItem("isLoggedIn", true);
+      window.localStorage.setItem("isAdmin", role);
       
       // navigate(from, { replace: true });
       window.location.href = '/movies';
