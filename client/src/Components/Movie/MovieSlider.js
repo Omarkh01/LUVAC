@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import MovieCard from "./MovieCard";
-
+// import { useStateContext } from "../../context/StateContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/swiper-bundle.min.css";
@@ -10,13 +10,15 @@ import "../style.css";
 
 const MovieSlider = () => {
   const [movies, setMovies] = useState([]);
-
+  
   useEffect(() => {
     axios
-      .get("/api/movies")
-      .then((response) => setMovies(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+    .get("/api/movies")
+    .then((response) => setMovies(response.data))
+    .catch((error) => console.log(error));
+  }, [setMovies]);
+    
+  
 
   return (
     <div className="container-fluid d-flex h-75">
@@ -59,6 +61,8 @@ const MovieSlider = () => {
                 <MovieCard
                   movieTitle={movie.title}
                   movieDescription={movie.description}
+                  movieImg={movie.imageUrl}
+                  genre={movie.genre.name}
                 />
               </SwiperSlide>
             );
