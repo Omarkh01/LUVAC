@@ -231,6 +231,7 @@ label {
 ul.result-dropdown {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 120px;
   width: 100%;
   margin: 0;
@@ -269,6 +270,7 @@ ul.result-dropdown {
 }
 
 .selected-movies-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -278,12 +280,13 @@ ul.result-dropdown {
 
 .selected-movies-container .selected-card {
   display: flex;
+  width: 100%;
+  position: relative;
 }
 
 .selected-movies-container img {
   vertical-align: top;
   width: 50px;
-  height: 60px;
   border-radius: 2px;
   margin-left: 8px;
   object-fit: cover;
@@ -293,7 +296,6 @@ ul.result-dropdown {
   height: 100%;
   display: inline-block;
   margin-left: 10px;
-  /* color: #fff; */
 }
 
 .details-container h3 {
@@ -310,7 +312,7 @@ ul.result-dropdown {
   font-size: 13px;
 }
 
-.details-container span {
+.details-container .IMDB {
   background-color: yellow;
   color: #000;
   font-weight: 600;
@@ -318,3 +320,13 @@ ul.result-dropdown {
   margin: 0 5px;
 }
 
+.removeBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

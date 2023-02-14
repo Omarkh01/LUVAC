@@ -6,8 +6,6 @@ import { StarFill } from "react-bootstrap-icons";
 import axios from "../api/axios";
 import "./style.css";
 
-import image from "../images/hero-bg-4.jpg";
-
 const NewRental = () => {
   // const { movies } = useStateContext();
   const [movies, setMovies] = useState([]);
@@ -32,6 +30,11 @@ const NewRental = () => {
     console.log(searchTerm);
   };
 
+  const removeCard = (e) => {
+    let container = e.target.parentNode;
+    container.remove();
+  }
+
   const handleSearchBtn = () => {
     setInputValue("");
 
@@ -46,9 +49,17 @@ const NewRental = () => {
         let cardContainer = document.createElement("div");
         cardContainer.classList.add("selected-movies-container");
         
-        let selectedCard = `<div class="selected-card"><img src="${movie.imageUrl}"/><div class="details-container"><h3>${movie.title}</h3><p>${movie.genre.name} ${movie.year},<span>IMDB</span><StarFill class="icon"/>${movie.rating}</p></div></div>`;
+        let selectedCard = `<div class="selected-card"><img src="${movie.imageUrl}"/><div class="details-container"><h3>${movie.title}</h3><p>${movie.genre.name} ${movie.year},<span class="IMDB">IMDB</span><StarFill class="icon"/>${movie.rating}</p></div></div>`;
 
         cardContainer.innerHTML = selectedCard;
+
+        // <span class="">Remove</span>
+        let removeBtn = document.createElement('span');
+        removeBtn.classList.add("removeBtn");
+        removeBtn.innerText = 'Remove';
+        removeBtn.addEventListener('click', removeCard);
+        cardContainer.appendChild(removeBtn);
+        
         parentDiv.insertBefore(cardContainer, childElement);
         rentalLimit++;
       }
