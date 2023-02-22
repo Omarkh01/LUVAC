@@ -1,13 +1,14 @@
-const winston = require('winston');
+const logger = require('./logging');
 const mongoose = require('mongoose');
-const config = require('config');
+require('dotenv').config();
 
 module.exports = function() {
-    const db = config.get('db');
-    mongoose.set("strictQuery", false);
+    const db = process.env.MONGODB_URL;
+
+    mongoose.set("strictQuery", true);
     mongoose
-        .connect(db, { useUnifiedTopology: true })
+        .connect(db)
         .then(() => console.log(`Connected to ${db}...`))
-        .catch((ex) => console.log('Could not connect.'));
+        .catch((err) => logger.error(err));
 }
 

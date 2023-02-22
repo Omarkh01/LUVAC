@@ -1,12 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 // import { useNavigate, useLocation } from 'react-router-dom';
-import { useStateContext } from '../context/StateContext';
+// import { useStateContext } from '../context/StateContext';
 
 import axios from "../api/axios";
 const LOGIN_URL = "/api/auth";
 
 const Login = () => {
-  const { setAuth } = useStateContext ();
+  // const { setAuth } = useStateContext ();
 
   const userRef = useRef();
   const errRef = useRef();
@@ -19,9 +19,9 @@ const Login = () => {
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
-  // useEffect(() => {
-  //   userRef.current.focus();
-  // }, []);
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
 
   useEffect(() => {
     setErrMsg("");
@@ -37,21 +37,20 @@ const Login = () => {
           password: pwd 
         });
 
-      console.log(JSON.stringify(response?.data));
-
-      const accessToken = response?.data.token;
+      // const accessToken = response?.data.token;
       const role = response?.data.role;
 
-      setAuth({ user, pwd, accessToken, role});
+      // setAuth({ user, pwd, accessToken, role});
       setUser("");
       setPwd("");
 
       window.localStorage.setItem("token", JSON.stringify(response.data.token));
       window.localStorage.setItem("isLoggedIn", true);
       window.localStorage.setItem("isAdmin", role);
-      
+      window.localStorage.setItem("email", user);
+
       // navigate(from, { replace: true });
-      window.location.href = '/movies';
+      window.location.href = '/';
     } 
     
     catch (err) {

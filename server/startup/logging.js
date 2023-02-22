@@ -1,32 +1,34 @@
-const winston = require('winston');
-const { format } = winston;
-require('winston-mongodb');
-require('express-async-errors');
+const { format, transports, createLogger } = require("winston");
+require("winston-mongodb");
+require("express-async-errors");
+// const dotenv = require('dotenv');
 
-module.exports = function (){
-    const logger = winston.createLogger({
-        level: 'info',
-        format: format.combine(
-            format.json(),
-            format.colorize()
-        ),
-        transports: [
-            new winston.transports.File({
-                filename: 'combined.log'
-            })
-        ],   
-        exceptionHandlers: [
-            new winston.transports.File({ 
-                filename: 'uncaughtExceptions.log'
-            })
-        ],
-        rejectionHandlers:[
-            new winston.transports.File({ 
-                filename: 'uncaughtRejections.log'
-            })
-        ], 
-        exitOnError: true,
-    })
-    
-    winston.add(new winston.transports.MongoDB({ db: 'mongodb://localhost/vidly'}));
-}
+// dotenv.config();
+
+const logger = createLogger({
+  format: format.combine(format.json(), format.prettyPrint()),
+  transports: [
+    new transports.Console(),
+    new transports.File({
+      level: "info",
+      filename: "info.log",
+    }),
+    new transports.MongoDB({
+      level: "error",
+      db: "mongodb://localhost/vidly",
+      collection: "errorLogs",
+    }),
+  ],
+  exceptionHandlers: [
+    new transports.File({
+      filename: "uncaughtExceptions.log",
+    }),
+  ],
+  rejectionHandlers: [
+    new transports.File({
+      filename: "uncaughtRejections.log",
+    }),
+  ],
+});
+
+module.exports = logger

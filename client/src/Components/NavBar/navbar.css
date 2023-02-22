@@ -1,0 +1,10 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: #8c8cb8;
+  font-weight: 500;
+}

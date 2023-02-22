@@ -32,17 +32,6 @@
   color: rgb(255, 255, 255);
 }
 
-/* NAV */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.nav-link {
-  color: #8c8cb8;
-  font-weight: 500;
-}
 
 /* Movies*/
 
@@ -193,11 +182,8 @@ label {
 }
 
 .errmsg {
-    /* background-color: lightpink; */
     color: red;
     font-weight: 500;
-    /* padding: 0.5rem; */
-    /* margin-bottom: 0.5rem; */
     font-style: italic;
 }
 
@@ -208,6 +194,7 @@ label {
 /* RENTALS */
 .rental-form-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -215,12 +202,12 @@ label {
 
 .inner-container {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 50px; 
   width: 400px;
+  overflow: auto;
 }
 
 .search-btn {
@@ -233,7 +220,7 @@ ul.result-dropdown {
   content: '';
   position: absolute;
   z-index: 1;
-  top: 120px;
+  top: 105px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -251,14 +238,16 @@ ul.result-dropdown {
   background-color: #f1f0f0;
 }
 
-.search-form .label-text {
+.inner-container label {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.searchBox label {
   font-size: 30px;
   font-weight: 600;
 }
 
-.inner-container div:nth-of-type(2) {
-  margin-top: 60px;
-}
 
 .error-msg-container {
   margin: 0 !important;
@@ -273,6 +262,10 @@ ul.result-dropdown {
   align-items: flex-end;
   margin-bottom: 10px;
   background-color: rgba(15, 15, 15, 0.066);
+}
+
+.selected-movies-container:nth-of-type(2) {
+  margin-top: 60px;
 }
 
 .selected-movies-container .selected-card {
@@ -326,4 +319,70 @@ ul.result-dropdown {
 .removeBtn:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.backBtn {
+  font-style: italic;
+}
+
+.backBtn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(0, 13, 255);
+}
+
+.movie-cont {
+  margin-bottom: 10px;
+}
+
+.rentedMovies, .tax-cont {
+  position: relative;
+  line-height: 2em;
+}
+
+.rentedMovies::before, .tax-cont::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.movieName, .moviePrice,
+.subTotalText, .subTotal,
+.taxText, .tax,
+.totalText, .total {
+  display: inline-block;
+  margin: 0;
+  width: 50%;
+}
+
+.moviePrice, .subTotal,
+ .tax, .total {
+  text-align: right;
+}
+
+.subT-cont {
+  margin-top: 1em;
+  position: relative;
+  line-height: 2.5em;
+}
+
+.subT-cont::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.total-cont {
+  line-height: 2.5em;
 }

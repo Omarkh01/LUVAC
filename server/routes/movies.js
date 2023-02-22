@@ -12,18 +12,18 @@ router.post('/', async (req, res) => {
     const { error } = validate(req.body);
     if(error) return res.status(400).send(error.details[0].message);
     
-    const genre = await Genre.findById(req.body.genreId);
-    if(!genre) return res.status(400).send('Invalid genre..'); 
+    // const genre = await Genre.findById(req.body.genreId);
+    // if(!genre) return res.status(400).send('Invalid genre..'); 
 
     const movie = new Movie({
         title: req.body.title,
-        genre: {
-            _id: genre._id,
-            name: genre.name
-        },
+        tmdbId: req.body.tmdbId,
+        genreName: req.body.genreName,
         description: req.body.description,
+        imageUrl: req.body.imageUrl,
+        year: req.body.year,
+        rating: req.body.rating,
         numberInStock: req.body.numberInStock,
-        dailyRentalRate: req.body.dailyRentalRate
     });
     await movie.save();
     res.send(movie);
@@ -33,23 +33,24 @@ router.put('/:id', async (req, res) => {
     const { error } = validate(req.body);
     if(error) return res.status(400).send(error.details[0].message);
     
-    const movie = await Movie.findByIdAndUpdate(req.params.id, {
-        title: req.body.title,
-        description: req.body.description,
-        numberInStock: req.body.numberInStock,
-        dailyRentalRate: req.body.dailyRentalRate
-    }, {new: true});
+    const { id } = req.params;
+    const update = req.body;
+
+    const movie = await Movie.findByIdAndUpdate(id, update, {new: true});
+
     if(!movie) return res.status(404).send('The movie with the given id was not found..');
 
     res.send(movie);
 })  
 
-router.delete('/:id', async (req, res) => {
-    const movie = await Movie.findByIdAndRemove(req.params.id);
-
-    if(!movie) return res.status(404).send('The movie with the given id was not found..');
+router.delete('/', async (req, res) => {
+    // const movie = await Movie.findByIdAndRemove(req.params.id);
+    // if(!movie) return res.status(404).send('The movie with the given id was not found..');
     
-    res.send(movie);
+    const query = { imageUrl: { $regex: "https" } };
+    const result = await Movie.deleteMany(query);
+
+    res.send("Deleted " + result.deletedCount + " documents");
 })
 
 module.exports = router;

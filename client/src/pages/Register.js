@@ -1,12 +1,17 @@
 import { useRef, useState, useEffect } from "react";
-import { faCheck, faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faTimes,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "../api/axios";
 import "./style.css";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const EML_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const EML_REGEX =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const REGISTER_URL = "/api/users";
 
 const Register = () => {
@@ -36,7 +41,7 @@ const Register = () => {
     userRef.current.focus();
   }, []);
 
-  useEffect(() => { 
+  useEffect(() => {
     setValidName(USER_REGEX.test(user));
   }, [user]);
 
@@ -46,7 +51,7 @@ const Register = () => {
 
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
-    setValidMatch(pwd === matchPwd); 
+    setValidMatch(pwd === matchPwd);
   }, [pwd, matchPwd]);
 
   useEffect(() => {
@@ -63,17 +68,13 @@ const Register = () => {
       return;
     }
     try {
-      const response = await axios.post(
-        REGISTER_URL, { 
-          name: user, 
-          email: email, 
-          password: pwd
+      const response = await axios.post(REGISTER_URL, {
+        name: user,
+        email: email,
+        password: pwd,
       });
-      // TODO: remove console.logs before deployment
-      // console.log(JSON.stringify(response?.data));
-      //console.log(JSON.stringify(response))
+
       setSuccess(true);
-      //clear state and controlled inputs
       setUser("");
       setPwd("");
       setMatchPwd("");
@@ -177,7 +178,8 @@ const Register = () => {
               }
             >
               <FontAwesomeIcon icon={faInfoCircle} />
-              Please include an <span aria-label="at symbol">@</span> in the email address
+              Please include an <span aria-label="at symbol">@</span> in the
+              email address
             </p>
 
             <label htmlFor="password">
