@@ -236,3 +236,543 @@
     }
   ]
 }
+{
+  error: Error: this is an error
+      at Object.<anonymous> (C:\Users\omar_\Desktop\LUVAC\server\index.js:22:7)
+      at Module._compile (node:internal/modules/cjs/loader:1105:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+      at Module.load (node:internal/modules/cjs/loader:981:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+      at node:internal/main/run_main_module:17:47,
+  level: 'error',
+  message: 'uncaughtException: this is an error\n' +
+    'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  stack: 'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  exception: true,
+  date: 'Wed Feb 22 2023 18:26:30 GMT-0600 (Central Standard Time)',
+  process: {
+    pid: 55184,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v16.15.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js'
+    ],
+    memoryUsage: {
+      rss: 55275520,
+      heapTotal: 31199232,
+      heapUsed: 20626312,
+      external: 22531368,
+      arrayBuffers: 19019753
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1566815 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js',
+      function: null,
+      line: 22,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1105,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1159,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 981,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 822,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 77,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'node:internal/main/run_main_module',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
+{
+  error: Error: this is an error
+      at Object.<anonymous> (C:\Users\omar_\Desktop\LUVAC\server\index.js:22:7)
+      at Module._compile (node:internal/modules/cjs/loader:1105:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+      at Module.load (node:internal/modules/cjs/loader:981:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+      at node:internal/main/run_main_module:17:47,
+  level: 'error',
+  message: 'uncaughtException: this is an error\n' +
+    'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  stack: 'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  exception: true,
+  date: 'Wed Feb 22 2023 18:26:56 GMT-0600 (Central Standard Time)',
+  process: {
+    pid: 53068,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v16.15.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js'
+    ],
+    memoryUsage: {
+      rss: 55062528,
+      heapTotal: 30937088,
+      heapUsed: 20621232,
+      external: 22531368,
+      arrayBuffers: 18981326
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1566840 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js',
+      function: null,
+      line: 22,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1105,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1159,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 981,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 822,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 77,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'node:internal/main/run_main_module',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
+{
+  error: Error: this is an error
+      at Object.<anonymous> (C:\Users\omar_\Desktop\LUVAC\server\index.js:22:7)
+      at Module._compile (node:internal/modules/cjs/loader:1105:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+      at Module.load (node:internal/modules/cjs/loader:981:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+      at node:internal/main/run_main_module:17:47,
+  level: 'error',
+  message: 'uncaughtException: this is an error\n' +
+    'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  stack: 'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:22:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  exception: true,
+  date: 'Wed Feb 22 2023 18:27:17 GMT-0600 (Central Standard Time)',
+  process: {
+    pid: 59120,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v16.15.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js'
+    ],
+    memoryUsage: {
+      rss: 55123968,
+      heapTotal: 31199232,
+      heapUsed: 20298472,
+      external: 22531051,
+      arrayBuffers: 18959911
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1566861 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js',
+      function: null,
+      line: 22,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1105,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1159,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 981,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 822,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 77,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'node:internal/main/run_main_module',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
+{
+  error: Error: this is an error
+      at Object.<anonymous> (C:\Users\omar_\Desktop\LUVAC\server\index.js:29:7)
+      at Module._compile (node:internal/modules/cjs/loader:1105:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+      at Module.load (node:internal/modules/cjs/loader:981:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+      at node:internal/main/run_main_module:17:47,
+  level: 'error',
+  message: 'uncaughtException: this is an error\n' +
+    'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:29:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  stack: 'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:29:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  exception: true,
+  date: 'Wed Feb 22 2023 18:28:30 GMT-0600 (Central Standard Time)',
+  process: {
+    pid: 56596,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v16.15.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js'
+    ],
+    memoryUsage: {
+      rss: 78798848,
+      heapTotal: 62496768,
+      heapUsed: 26724008,
+      external: 37098047,
+      arrayBuffers: 36135552
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1566934 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js',
+      function: null,
+      line: 29,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1105,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1159,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 981,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 822,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 77,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'node:internal/main/run_main_module',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
+{
+  error: Error: this is an error
+      at Object.<anonymous> (C:\Users\omar_\Desktop\LUVAC\server\index.js:29:7)
+      at Module._compile (node:internal/modules/cjs/loader:1105:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+      at Module.load (node:internal/modules/cjs/loader:981:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+      at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+      at node:internal/main/run_main_module:17:47,
+  level: 'error',
+  message: 'uncaughtException: this is an error\n' +
+    'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:29:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  stack: 'Error: this is an error\n' +
+    '    at Object.<anonymous> (C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js:29:7)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n' +
+    '    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:981:32)\n' +
+    '    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n' +
+    '    at node:internal/main/run_main_module:17:47',
+  exception: true,
+  date: 'Wed Feb 22 2023 18:28:42 GMT-0600 (Central Standard Time)',
+  process: {
+    pid: 59796,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v16.15.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js'
+    ],
+    memoryUsage: {
+      rss: 79261696,
+      heapTotal: 60661760,
+      heapUsed: 29063048,
+      external: 37098364,
+      arrayBuffers: 36150805
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1566946 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\omar_\\Desktop\\LUVAC\\server\\index.js',
+      function: null,
+      line: 29,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1105,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._extensions..js',
+      line: 1159,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 981,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 822,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/run_main',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 77,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'node:internal/main/run_main_module',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}

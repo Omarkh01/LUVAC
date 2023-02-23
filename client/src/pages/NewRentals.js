@@ -155,6 +155,7 @@ const NewRental = () => {
     setRentalFee(new Decimal(0));
     setMovieLimit(0);
     setSuccess(false);
+    setErrMsg("");
   };
 
   return (

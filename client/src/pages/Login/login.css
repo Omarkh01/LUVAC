@@ -16,7 +16,7 @@
   width: 500px;
   padding: 40px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   background: #191919;
   text-align: center;
@@ -145,7 +145,7 @@ a.socialIcon:hover,
 .social-circle li a:hover svg,
 .triggeredHover {
   transform: rotate(360deg);
-  transition: all 0.2s
+  transition: all 0.8s
 }
 
 .social-circle svg {
@@ -165,4 +165,35 @@ a.socialIcon:hover,
 
 .signupText a:hover {
   color: rgba(255, 255, 255, 0.833);
+}
+
+
+@media (min-width: 1400px) {
+  .col-md-6 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .box {
+    width: 450px;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 33%;
+  }
+  .box {
+    width: 400px;
+  }
+}
+
+@media (max-width: 558px) {
+  .box {
+    width: 350px;
+  }
 }

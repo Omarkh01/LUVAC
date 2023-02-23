@@ -1,9 +1,7 @@
 const { format, transports, createLogger } = require("winston");
 require("winston-mongodb");
 require("express-async-errors");
-// const dotenv = require('dotenv');
-
-// dotenv.config();
+require('dotenv').config();
 
 const logger = createLogger({
   format: format.combine(format.json(), format.prettyPrint()),
@@ -15,7 +13,7 @@ const logger = createLogger({
     }),
     new transports.MongoDB({
       level: "error",
-      db: "mongodb://localhost/vidly",
+      db: process.env.MONGODB_URL,
       collection: "errorLogs",
     }),
   ],
@@ -28,7 +26,7 @@ const logger = createLogger({
     new transports.File({
       filename: "uncaughtRejections.log",
     }),
-  ],
+  ]
 });
 
 module.exports = logger
