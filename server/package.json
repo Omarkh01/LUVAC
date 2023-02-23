@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --verbose",
-    "start": "node index.js"
+    "start": "nodemon index"
   },
   "engines": {
     "node": "16.15.1"

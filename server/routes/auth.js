@@ -2,7 +2,6 @@ const Joi = require('joi');
 const _ = require('lodash');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
-const config = require('config');  
 const express = require('express');
 const router = express.Router();
 const { User } = require('../models/user');
@@ -21,16 +20,17 @@ router.post('/', async (req, res) => {
     if (admin === undefined) admin = false;
 
     const accessToken = user.generateAuthToken();
-    const refreshToken = jwt.sign(
-        { _id: user._id },
-        config.get('rtPrivateKey'), 
-        { expiresIn: '1d' }
-    );
 
-    await User.findByIdAndUpdate(user._id, {refreshToken: refreshToken}, {new: true});
+    // const refreshToken = jwt.sign(
+    //     { _id: user._id },
+    //     config.get('rtPrivateKey'), 
+    //     { expiresIn: '1d' }
+    // );
+    // await User.findByIdAndUpdate(user._id, {refreshToken: refreshToken}, {new: true});
     
-    let maxAge = 24 * 60 * 60 * 1000;
-    res.cookie("jwt", refreshToken, { httpOnly: true, maxAge: maxAge });
+    // let maxAge = 24 * 60 * 60 * 1000;
+    // res.cookie("jwt", refreshToken, { httpOnly: true, maxAge: maxAge });
+
     res.send({token: accessToken, role: admin});
 })
 

@@ -41,7 +41,6 @@ const MovieList = () => {
     //     };
         
     //     movieList.map(async (movie) => {
-    //         console.log(typeof movie.id);            
     //         await axios.post("/api/movies", {
     //             title: movie.original_title,
     //             tmdbId: movie.id,
